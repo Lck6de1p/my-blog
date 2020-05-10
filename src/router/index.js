@@ -7,11 +7,15 @@ export default new Router({
     routes: [
         {
             path: '/',
-            redirect: '/test'
+            redirect: '/homePage'
         },
         {
             path: '/test',
             component: () => import('@/components/common/Header')
+        },
+        {
+            path: '/homePage',
+            component: () => import('@/components/page/homePage')
         }
     ]
 })

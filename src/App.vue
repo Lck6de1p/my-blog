@@ -1,7 +1,8 @@
 <template>
     <div id="app">
-        1
-        <router-view />
+        <transition name="move">
+            <router-view />
+        </transition>
     </div>
 </template>
 
@@ -13,12 +14,13 @@ export default {
 </script>
 
 <style>
-html,
-body,
-#app {
-    min-width: 1300px;
-    min-height: 700px;
-    width: 100%;
-    height: 100%;
+.move-enter-active,
+.move-leave-active {
+    transition: opacity .5s;
 }
+.move-enter,
+.move-leave {
+    opacity: 0;
+}
+
 </style>

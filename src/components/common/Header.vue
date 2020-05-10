@@ -1,6 +1,6 @@
 <template>
-    <div>
-        header
+    <div class="nav-bar">
+        ck的博客呀
     </div>
 </template>
 
@@ -10,6 +10,18 @@ export default {
 }
 </script>
 
-<style>
-
+<style scoped>
+.nav-bar {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 50px;
+    padding-left: 15px;
+    font-weight: 800px;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 50px;
+    background-color: #181818;
+    z-index: 10;
+}
 </style>
