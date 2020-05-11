@@ -22,5 +22,7 @@ export default {
 .move-leave {
     opacity: 0;
 }
-
+body {
+    background-color: #181818;
+}
 </style>

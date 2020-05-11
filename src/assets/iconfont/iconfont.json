@@ -1,0 +1,30 @@
+{
+  "id": "1811293",
+  "name": "my-blog",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "11488230",
+      "name": "bussiness-man-fill",
+      "font_class": "bussiness-man-fill",
+      "unicode": "e779",
+      "unicode_decimal": 59257
+    },
+    {
+      "icon_id": "11488238",
+      "name": "clock-fill",
+      "font_class": "clock-fill",
+      "unicode": "e77b",
+      "unicode_decimal": 59259
+    },
+    {
+      "icon_id": "11488269",
+      "name": "discount-fill",
+      "font_class": "discount-fill",
+      "unicode": "e77d",
+      "unicode_decimal": 59261
+    }
+  ]
+}
