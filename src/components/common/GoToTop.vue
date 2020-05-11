@@ -27,7 +27,6 @@ export default {
         },
         getScrollHeight() {
             this.scrollHight = document.body.scrollTop || document.documentElement.scrollTop
-            console.log(this.scrollHight)
         }
     },
     mounted() {
