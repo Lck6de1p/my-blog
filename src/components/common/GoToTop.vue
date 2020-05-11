@@ -17,7 +17,7 @@ export default {
         gotoTop() {
             let timer = setInterval(() => {
                 if (this.scrollHight > 0) {
-                   this.scrollHight -= 20
+                   this.scrollHight -= 10
                     window.scrollTo(0, this.scrollHight)
                 } else {
                     clearInterval(timer)
@@ -44,16 +44,18 @@ export default {
 .toTop-btn {
     position: fixed;
     bottom: 50px;
-    right: 20px;
+    right: 10px;
     width: 40px;
     height: 40px;
     text-align: center;
     line-height: 40px;
+    background-color: #181818;
     box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.9);
     cursor: pointer;
 }
 .icon-huidaodingbu {
     font-size: 30px;
+    color: #3eaf7c;
 }
 .to-top-enter-active,
 .to-top-leave-active {
