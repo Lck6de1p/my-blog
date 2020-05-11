@@ -15,15 +15,26 @@ export default {
     },
     methods: {
         gotoTop() {
-            let timer = setInterval(() => {
-                if (this.scrollHight > 0) {
-                   this.scrollHight -= 10
-                    window.scrollTo(0, this.scrollHight)
+            let timer = null
+            let _this = this
+            cancelAnimationFrame(timer)
+            timer = requestAnimationFrame(function fn() {
+                if (_this.scrollHight > 0) {
+                    window.scrollTo(0, _this.scrollHight - 50)
+                    timer = requestAnimationFrame(fn)
                 } else {
-                    clearInterval(timer)
-                    this.scrollHight = 0
+                    cancelAnimationFrame(timer)
                 }
-            }, 1)
+            })
+            // let timer = setInterval(() => {
+            //     if (this.scrollHight > 0) {
+            //        this.scrollHight -= 10
+            //         window.scrollTo(0, this.scrollHight)
+            //     } else {
+            //         clearInterval(timer)
+            //         this.scrollHight = 0
+            //     }
+            // }, 1)
         },
         getScrollHeight() {
             this.scrollHight = document.body.scrollTop || document.documentElement.scrollTop
@@ -44,17 +55,18 @@ export default {
 .toTop-btn {
     position: fixed;
     bottom: 50px;
-    right: 10px;
+    right: 30px;
     width: 40px;
     height: 40px;
     text-align: center;
     line-height: 40px;
     background-color: #181818;
+    border-radius: 4px;
     box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.9);
     cursor: pointer;
 }
 .icon-huidaodingbu {
-    font-size: 30px;
+    font-size: 25px;
     color: #3eaf7c;
 }
 .to-top-enter-active,

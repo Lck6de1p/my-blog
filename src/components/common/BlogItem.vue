@@ -1,7 +1,7 @@
 <template>
     <div class="blog-list-item">
         <div class="blog-list-item-title">
-            <span>{{data.title}}</span>
+            <span @click="test">{{data.title}}</span>
         </div>
         <div class="iconfont-wrapper">
             <span class="iconfont icon-bussiness-man-fill" data="lck"></span>
@@ -18,7 +18,11 @@ export default {
                 title: '测试',
                 time: '2020-02-03'
             }
-
+        }
+    },
+    methods: {
+        test() {
+            alert('ceshi')
         }
     }
 };
