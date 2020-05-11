@@ -4,8 +4,8 @@
             <span>{{data.title}}</span>
         </div>
         <div class="iconfont-wrapper">
-            <span class="iconfont bussiness-man-fill icon-bussiness-man-fill" data="lck"></span>
-            <span class="iconfont clock-fill icon-clock-fill" :data="data.time"></span>
+            <span class="iconfont icon-bussiness-man-fill" data="lck"></span>
+            <span class="iconfont icon-clock-fill" :data="data.time"></span>
         </div>
     </div>
 </template>
@@ -28,7 +28,7 @@ export default {
 .blog-list-item {
     padding: 16px 20px;
     margin-bottom: 20px;
-    transition: all 0.3s ease-in-out;
+    transition: all .3s ease-in-out;
     box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.9);
 }
 .blog-list-item:hover {

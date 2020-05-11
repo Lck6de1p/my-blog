@@ -3,13 +3,18 @@
         <transition name="move">
             <router-view />
         </transition>
+        <to-top />
     </div>
 </template>
 
 <script>
+import toTop from '@/components/common/GoToTop'
+
 
 export default {
-
+    components: {
+        toTop
+    }
 };
 </script>
 
@@ -25,4 +30,12 @@ export default {
 body {
     background-color: #181818;
 }
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        background: #3eaf7c;
+    }
 </style>
