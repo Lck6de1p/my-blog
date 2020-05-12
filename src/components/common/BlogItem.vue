@@ -22,27 +22,27 @@ export default {
     },
     methods: {
         test() {
-            alert('ceshi')
+            this.$router.push('test')
         }
     }
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .blog-list-item {
     padding: 16px 20px;
     margin-bottom: 20px;
     transition: all .3s ease-in-out;
-    box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.9);
+    box-shadow: $shadow
 }
 .blog-list-item:hover {
-    box-shadow: 0 2px 26px 0 rgba(0, 0, 0, 0.9);
+    box-shadow: $shadow-hover
 }
 .blog-list-item-title {
     line-height: 36px;
     font-size: 1.1rem;
     font-weight: 500;
-    color: #3eaf7c;
+    color: $green-color;
     border-bottom: 1px solid rgba(0, 0, 0, 0.3);
 }
 .blog-list-item-title span {
@@ -62,19 +62,8 @@ export default {
     bottom: -2px;
     width: 0;
     height: 2px;
-    background: #3eaf7c;
+    background: $green-color;
     transition: all .3s;
 }
-.iconfont::after {
-    content: attr(data)
-}
-.iconfont {
-    color: #8b8b8b;
-}
-.iconfont-wrapper {
-    margin-top: 10px;
-}
-.iconfont-wrapper span:not(:first-child){
-    margin-left: 30px;
-}
+
 </style>

@@ -11,7 +11,7 @@ export default new Router({
         },
         {
             path: '/test',
-            component: () => import('@/components/common/Header')
+            component: () => import('@/components/page/test')
         },
         {
             path: '/homePage',

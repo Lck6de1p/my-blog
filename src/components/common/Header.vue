@@ -1,16 +1,20 @@
 <template>
     <div class="nav-bar">
-        ck的博客呀
+        <span @click="gotoHomePage">ck的博客呀</span>
     </div>
 </template>
 
 <script>
 export default {
-
+    methods: {
+        gotoHomePage() {
+            this.$router.push('homePage')
+        }
+    }
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .nav-bar {
     position: fixed;
     left: 0;
@@ -19,10 +23,13 @@ export default {
     height: 50px;
     padding-left: 15px;
     font-weight: 800px;
-    color: rgba(255, 255, 255, 0.8);
+    color: $text-color;
     line-height: 50px;
     background-color: #181818;
-    box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.9);
+    box-shadow: $shadow;
     z-index: 10;
+    span {
+        cursor: pointer;
+    }
 }
 </style>

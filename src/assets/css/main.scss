@@ -1,0 +1,41 @@
+$green-color: #3eaf7c;
+// 全文文字主色调
+$text-color: rgba(255, 255, 255, 0.8); 
+// 阴影样式
+$shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.9);
+// hover后阴影样式
+$shadow-hover: 0 2px 26px 0 rgba(0, 0, 0, 0.9);
+
+// 作者时间小标签样式
+.iconfont::after {
+    content: attr(data)
+}
+.iconfont {
+    color: #8b8b8b;
+}
+.iconfont-wrapper {
+    margin-top: 10px;
+}
+.iconfont-wrapper span:not(:first-child){
+    margin-left: 30px;
+}
+// 文章大标题
+.blog-content-title {
+    padding: 20px 0;
+    color: $text-color;
+    font-weight: 600;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.9);
+}
+
+.first-move-enter-active {
+    transition: all .5s ease;
+}
+.secend-move-enter-active {
+    transition: all .6s ease;
+}
+.first-move-enter,
+.secend-move-enter {
+    transform: translateY(-30px);
+    opacity: 0;
+}
+

@@ -36,6 +36,6 @@ body {
 }
 ::-webkit-scrollbar-thumb {
         border-radius: 10px;
-        background: #3eaf7c;
+        background: $shadow-hover;
     }
 </style>

@@ -12,7 +12,7 @@
                     </transition>
                 </div>
             </div>
-            <transition name="blog-wrapper-move">
+            <transition name="first-move">
                 <div class="blog-wrapper" v-show="active">
                     <div class="blog-list">
                        <blog-item v-for="item in 20" :key="item" />
@@ -90,7 +90,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .header {
     height: 180px;
     padding-top: 120px;
@@ -131,9 +131,9 @@ export default {
     top: 70px;
     transition: all .3s;
     margin-left: 15px;
-    color: rgba(255, 255, 255, 0.8);
+    color: $text-color;
     flex: 0 0 300px;
-    box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.9);
+    box-shadow: $shadow;
     border-radius: .25rem;
     box-sizing: border-box;
     padding: 0 15px;
@@ -170,14 +170,14 @@ export default {
 .tags-item {
     padding: 5px 10px;
     height: 20px;
-    color: #3eaf7c;
+    color: $shadow-hover;
     margin-bottom: 10px;
-    box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.9);
+    box-shadow: $shadow;
     cursor: pointer;
     transition: all .3s ease-in-out;
 }
 .tags-item:hover {
-    box-shadow: 0 2px 26px 0 rgba(0, 0, 0, 0.9);
+    box-shadow: $shadow-hover;
 }
 .tag-num {
     float: right;
@@ -195,11 +195,5 @@ export default {
   transform: translateY(-50px);
   opacity: 0;
 }
-.blog-wrapper-move-enter-active {
-    transition: all .7s ease;
-}
-.blog-wrapper-move-enter{
-    transform: translateY(-30px);
-    opacity: 0;
-}
+
 </style>

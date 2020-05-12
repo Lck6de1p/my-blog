@@ -51,7 +51,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 .toTop-btn {
     position: fixed;
     bottom: 50px;
@@ -62,12 +62,12 @@ export default {
     line-height: 40px;
     background-color: #181818;
     border-radius: 4px;
-    box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.9);
+    box-shadow: $shadow;
     cursor: pointer;
 }
 .icon-huidaodingbu {
     font-size: 25px;
-    color: #3eaf7c;
+    color: $shadow-hover;
 }
 .to-top-enter-active,
 .to-top-leave-active {
