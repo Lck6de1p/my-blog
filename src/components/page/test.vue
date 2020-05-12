@@ -54,7 +54,7 @@ export default {
 }
 .blog-page {
     margin-left: 256px;
-    padding-top: 50px;
+    padding: 50px 30px;
 }
 .blog-content {
     max-width: 740px;

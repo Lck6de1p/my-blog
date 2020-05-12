@@ -1,10 +1,12 @@
 @media (max-width: 768px) {
+    /* 控制头部样式字体大小 */
     .header-title h1 {
         font-size: 2.2rem;
     }
     .header-title p {
         font-size: 1.2rem;
     }
+    /* 控制主页面个人信息显示消失 */
     .info-wrappper {
         display: none;
     }
@@ -13,7 +15,18 @@
     }
 }
 
+@media (max-width: 700px) {
+    /* 控制博客主页侧边栏显示消失 */
+    .nav-bar-pc {
+        display: none;
+    }
+    .blog-page {
+        margin-left: 0px !important;
+    }
+}
+
 @media (min-width: 768px) {
+    /* 控制头部样式字体大小 */
     .header-title h1 {
         font-size: 2.5rem;
     }
