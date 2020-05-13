@@ -1,8 +1,8 @@
 <template>
-    <div class="sider-bar">
-        <p class="sider-bar-title">这是一个测试的标题</p>
+    <div class="title-list">
+        <p class="title-list-title">这是一个测试的标题</p>
         <ul>
-            <li class="sider-bar-item" @click="chose(index)" v-for="(item, index) in datList" :class="{'sider-bar-item-active': active == index}" :key="index">{{item}}</li>
+            <li class="title-list-item" @click="chose(index)" v-for="(item, index) in datList" :class="{'title-list-item-active': active == index}" :key="index">{{item}}</li>
         </ul>
     </div>
 </template>
@@ -25,16 +25,16 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.sider-bar {
+.title-list {
     padding: 20px 0;
 }
-.sider-bar-title {
+.title-list-title {
     margin-bottom: 10px;
     font-size: 1.1rem;
     font-weight: 700;
     color: $text-color;
 }
-.sider-bar-item {
+.title-list-item {
     font-size: 1rem;
     color: $text-color;
     line-height: 1.4;
@@ -43,12 +43,12 @@ export default {
     border-radius: 5px;
     cursor: pointer;
 }
-.sider-bar-item-active {
+.title-list-item-active {
     color: #fff !important;
     background-color: $green-color;
 
 }
-.sider-bar-item:hover {
+.title-list-item:hover {
     color: $green-color;
 }
 </style>

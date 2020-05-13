@@ -7,6 +7,7 @@
                     <span class="iconfont icon-houtui" @click="close"></span>
                 </div>
                 <avatar />
+                <title-list />
             </div>
         </transition>
     </div>
@@ -15,6 +16,7 @@
 <script>
 import bus from './bus'
 import avatar from './Avatar'
+import titleList from './TitleList'
 
 export default {
     data() {
@@ -23,7 +25,8 @@ export default {
         }
     },
     components: {
-        avatar
+        avatar,
+        titleList
     },
     created() {
         bus.$on('openSiderBar', () => {

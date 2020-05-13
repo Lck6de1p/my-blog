@@ -1,8 +1,8 @@
 <template>
     <div>
         <v-header></v-header>
-        <div class="nav-bar-pc">
-            <nav-bar />
+        <div class="title-list-pc">
+            <title-list />
         </div>
         <div class="blog-page">
             <div class="blog-content">
@@ -21,7 +21,7 @@
 </template>
 
 <script>
-import navBar from '../common/NavBar' 
+import titleList from '../common/TitleList' 
 import vHeader from '../common/Header'
 
 
@@ -32,7 +32,7 @@ export default {
         }
     },
     components: {
-        navBar,
+        titleList,
         vHeader
     },
     created() {
@@ -44,7 +44,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.nav-bar-pc {
+.title-list-pc {
     position: fixed;
     top: 50px;
     bottom: 0;
