@@ -14,6 +14,7 @@ export default {
         }
     },
     methods: {
+        // 使用requestAnimationFrame实现回到顶部功能
         gotoTop() {
             let timer = null
             let _this = this
@@ -26,24 +27,18 @@ export default {
                     cancelAnimationFrame(timer)
                 }
             })
-            // let timer = setInterval(() => {
-            //     if (this.scrollHight > 0) {
-            //        this.scrollHight -= 10
-            //         window.scrollTo(0, this.scrollHight)
-            //     } else {
-            //         clearInterval(timer)
-            //         this.scrollHight = 0
-            //     }
-            // }, 1)
         },
+        // 计算当前滚动条位置
         getScrollHeight() {
             this.scrollHight = document.body.scrollTop || document.documentElement.scrollTop
         }
     },
     mounted() {
+        // 监听滚动事件
         window.addEventListener('scroll', this.getScrollHeight)
     },
     computed: {
+        // 滚动条如果滚动距离超过了100px，显示回到顶部按钮
         btnShow() {
             return this.scrollHight > 100
         }

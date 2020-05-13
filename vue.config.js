@@ -1,11 +1,11 @@
 
 module.exports = {
-    publicPath: './',
-    css: {
-      loaderOptions: {
-        sass: {
-            prependData: `@import "@/assets/css/main.scss";`
-        }
-      }
-    }
-  }
+	publicPath: './',
+	css: {
+		loaderOptions: {
+			scss: {
+				prependData: `@import "@/assets/css/main.scss";`
+			}
+		}
+	}
+}c
