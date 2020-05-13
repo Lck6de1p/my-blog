@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="mask" v-show="active" @click="close"></div>
+        <div class="mask" v-show="active" @click="close" @touchmove.prevent></div>
         <transition name="left-move">
             <div class="sider-bar" v-show="active">
                 <div class="back">
