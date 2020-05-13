@@ -23,6 +23,8 @@
 <script>
 import navBar from '../common/NavBar' 
 import vHeader from '../common/Header'
+
+
 export default {
     data() {
         return {

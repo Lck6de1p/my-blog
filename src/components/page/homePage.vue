@@ -42,6 +42,7 @@
                 </div>
             </transition>
         </div>
+        <v-footer />
     </div>
 </template>
 
@@ -49,6 +50,7 @@
 import vHeader from '@/components/common/Header'
 import blogItem from '@/components/common/BlogItem' 
 import avatar from '@/components/common/Avatar'
+import vFooter from '../common/Footer'
 
 export default {
     data() {
@@ -65,7 +67,8 @@ export default {
     components: {
         vHeader,
         blogItem,
-        avatar
+        avatar,
+        vFooter
     },
     created() {
         setTimeout(() => {

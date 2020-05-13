@@ -6,6 +6,20 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "3958512",
+      "name": "copyright",
+      "font_class": "copyright",
+      "unicode": "e8ce",
+      "unicode_decimal": 59598
+    },
+    {
+      "icon_id": "12695969",
+      "name": "备案工作",
+      "font_class": "icon__beiangongzuo",
+      "unicode": "e67a",
+      "unicode_decimal": 59002
+    },
+    {
       "icon_id": "4942643",
       "name": "后退",
       "font_class": "houtui",
