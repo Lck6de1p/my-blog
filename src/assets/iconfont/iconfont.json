@@ -6,6 +6,20 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "4942643",
+      "name": "后退",
+      "font_class": "houtui",
+      "unicode": "e613",
+      "unicode_decimal": 58899
+    },
+    {
+      "icon_id": "7008914",
+      "name": "createtask_fill",
+      "font_class": "createtask_fill",
+      "unicode": "e6ee",
+      "unicode_decimal": 59118
+    },
+    {
       "icon_id": "834249",
       "name": "回到顶部",
       "font_class": "huidaodingbu",

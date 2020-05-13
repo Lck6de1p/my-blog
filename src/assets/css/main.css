@@ -1,4 +1,7 @@
 @media (max-width: 768px) {
+    .sider-btn {
+        display: inline;   
+    }
     /* 控制头部样式字体大小 */
     .header-title h1 {
         font-size: 2.2rem;
@@ -32,6 +35,9 @@
     }
     .header-title p {
         font-size: 1.5rem;
+    }
+    .sider-btn {
+        display: none;   
     }
 }
 

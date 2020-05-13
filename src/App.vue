@@ -1,24 +1,25 @@
 <template>
     <div id="app">
-        <transition name="move">
-            <router-view />
-        </transition>
+        
+        <router-view />
         <to-top />
+        <sider-bar />
     </div>
 </template>
 
 <script>
 import toTop from '@/components/common/GoToTop'
-
+import siderBar from '@/components/common/SiderBar'
 
 export default {
     components: {
-        toTop
+        toTop,
+        siderBar
     }
 };
 </script>
 
-<style>
+<style lang="scss">
 .move-enter-active,
 .move-leave-active {
     transition: opacity .5s;
@@ -28,14 +29,14 @@ export default {
     opacity: 0;
 }
 body {
-    background-color: #181818;
+    background-color: $background-color;
 }
 ::-webkit-scrollbar {
     width: 5px;
     height: 5px;
 }
 ::-webkit-scrollbar-thumb {
-        border-radius: 10px;
-        background: $shadow-hover;
-    }
+    border-radius: 10px;
+    background: $green-color;
+}
 </style>

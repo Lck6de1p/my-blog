@@ -18,20 +18,7 @@
                        <blog-item v-for="item in 20" :key="item" />
                     </div>
                     <div class="info-wrappper">
-                        <div class="avatar-wrapper">
-                            <img src="../../assets/img/avatar.jpg" class="avatar-img">
-                            <h3 class="avatar-name">lck6de1p</h3>
-                            <div class="num-wrapper">
-                                <div>
-                                    <h4 class="num-item">20</h4>
-                                    <h6>article</h6>
-                                </div>
-                                <div>
-                                    <h4 class="num-item">5</h4>
-                                    <h6>tag</h6>
-                                </div>
-                            </div>
-                        </div>
+                        <avatar />
                         <h3 class="type-title">Category</h3>
                         <ul class="tags-wrapper">
                             <li class="tags-item">
@@ -61,6 +48,8 @@
 <script>
 import vHeader from '@/components/common/Header'
 import blogItem from '@/components/common/BlogItem' 
+import avatar from '@/components/common/Avatar'
+
 export default {
     data() {
         return {
@@ -75,7 +64,8 @@ export default {
     },
     components: {
         vHeader,
-        blogItem
+        blogItem,
+        avatar
     },
     created() {
         setTimeout(() => {
@@ -137,31 +127,6 @@ export default {
     border-radius: .25rem;
     box-sizing: border-box;
     padding: 0 15px;
-}
-.avatar-img {
-    width: 128px;
-    height: 128px;
-    margin: 20px auto;
-    border-radius: 50%;
-}
-.avatar-name {
-    text-align: center;
-}
-.num-wrapper {
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    margin-top: 10px;
-}
-.num-wrapper div {
-    width: 50%;
-    box-sizing: border-box;
-}
-.num-wrapper div:first-child {
-    border-right: 1px solid #333;
-}
-.num-item {
-    font-weight: 500;
 }
 .type-title {
     line-height: 50px;
