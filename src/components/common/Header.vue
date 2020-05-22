@@ -10,7 +10,7 @@ import bus from './bus'
 export default {
     methods: {
         gotoHomePage() {
-            this.$router.push('homePage')
+            this.$router.push('homepage')
         },
         openSiderBar() {
             bus.$emit('openSiderBar')

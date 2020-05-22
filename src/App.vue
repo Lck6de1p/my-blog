@@ -1,7 +1,8 @@
 <template>
     <div id="app">
-        
-        <router-view />
+        <transition name="move">
+            <router-view />
+        </transition>
         <to-top />
         <sider-bar />
     </div>

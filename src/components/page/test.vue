@@ -6,7 +6,7 @@
         </div>
         <div class="blog-page">
             <div class="blog-content">
-                <transition name="first-move">
+                <!-- <transition name="first-move">
                     <div v-show="active">
                         <h1 class="blog-content-title">这是一个测试标题</h1>
                         <div class="iconfont-wrapper">
@@ -14,7 +14,21 @@
                             <span class="iconfont icon-clock-fill" data="2020-03-05"></span>
                         </div>
                     </div>
-                </transition>
+                </transition> -->
+                <h1 class="blog-content-title">这是一个测试标题</h1>
+                <div class="iconfont-wrapper">
+                    <span class="iconfont icon-bussiness-man-fill" data="lck"></span>
+                    <span class="iconfont icon-clock-fill" data="2020-03-05"></span>
+                </div>
+
+                <h2 class="primary-title">这是一个小标题1</h2>
+                <div style="height: 500px"></div>
+                <h2 class="primary-title">这是一个小标题2</h2>
+                <div style="height: 500px"></div>
+                <h2 class="primary-title">这是一个小标题3</h2>
+                <div style="height: 500px"></div>
+                <h2 class="primary-title">这是一个小标题4</h2>
+                <div style="height: 500px"></div>
             </div>
         </div>
     </div>
@@ -28,17 +42,26 @@ import vHeader from '../common/Header'
 export default {
     data() {
         return {
-            active: false
+            active: false,
+            scroll: 0
         }
     },
     components: {
         titleList,
         vHeader
     },
-    created() {
-        setTimeout(() => {
-            this.active = true
-        }, 0)
+    methods: {
+        getScroll() {
+            this.scroll = document.documentElement.scrollTop || document.body.scrollTop;
+            this.$store.commit('GET_SCROLL', this.scroll)
+        }
+    },
+    mounted() {
+        this.$store.commit('GET_TITLE'),
+        window.addEventListener('scroll', this.getScroll)
+    },
+    destroyed() {
+        window.removeEventListener('scroll', this.getScroll)
     }
 }
 </script>
