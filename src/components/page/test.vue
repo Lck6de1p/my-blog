@@ -20,15 +20,23 @@
                     <span class="iconfont icon-bussiness-man-fill" data="lck"></span>
                     <span class="iconfont icon-clock-fill" data="2020-03-05"></span>
                 </div>
-
-                <h2 class="primary-title">这是一个小标题1</h2>
-                <div style="height: 500px"></div>
-                <h2 class="primary-title">这是一个小标题2</h2>
-                <div style="height: 500px"></div>
-                <h2 class="primary-title">这是一个小标题3</h2>
-                <div style="height: 500px"></div>
-                <h2 class="primary-title">这是一个小标题4</h2>
-                <div style="height: 500px"></div>
+                <div class="blog-paragraph">
+                    <h2 class="primary-title">这是一个小标题1</h2>
+                    <div style="height: 500px"></div>
+                </div>
+                <div class="blog-paragraph">
+                    <h2 class="primary-title">这是一个小标题2</h2>
+                    <div style="height: 500px"></div>
+                </div>
+                <div class="blog-paragraph">
+                    <h2 class="primary-title">这是一个小标题3</h2>
+                    <div style="height: 600px"></div>
+                </div>
+                <div class="blog-paragraph">
+                    <h2 class="primary-title">这是一个小标题4</h2>
+                    <div style="height: 500px"></div>
+                </div>
+                
             </div>
         </div>
     </div>
@@ -57,7 +65,7 @@ export default {
         }
     },
     mounted() {
-        this.$store.commit('GET_TITLE'),
+        this.$store.commit('GET_TITLE')
         window.addEventListener('scroll', this.getScroll)
     },
     destroyed() {
