@@ -1,6 +1,6 @@
 <template>
     <div class="title-list">
-        <p class="title-list-title">这是一个测试的标题</p>
+        <p class="title-list-title">{{title}}</p>
         <ul>
             <li class="title-list-item" @click="chose(index)" v-for="(item, index) in datList" :class="{'title-list-item-active': currentIndex == index}" :key="index">{{item}}</li>
         </ul>
@@ -38,6 +38,9 @@ export default {
         },
         scroll() {
             return this.$store.state.scroll
+        },
+        title() {
+            return this.$store.state.titleListTitle
         }
     }
 }

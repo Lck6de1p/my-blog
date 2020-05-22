@@ -6,15 +6,6 @@
         </div>
         <div class="blog-page">
             <div class="blog-content">
-                <!-- <transition name="first-move">
-                    <div v-show="active">
-                        <h1 class="blog-content-title">这是一个测试标题</h1>
-                        <div class="iconfont-wrapper">
-                            <span class="iconfont icon-bussiness-man-fill" data="lck"></span>
-                            <span class="iconfont icon-clock-fill" data="2020-03-05"></span>
-                        </div>
-                    </div>
-                </transition> -->
                 <h1 class="blog-content-title">这是一个测试标题</h1>
                 <div class="iconfont-wrapper">
                     <span class="iconfont icon-bussiness-man-fill" data="lck"></span>
@@ -22,7 +13,9 @@
                 </div>
                 <div class="blog-paragraph">
                     <h2 class="primary-title">这是一个小标题1</h2>
-                    <div style="height: 500px"></div>
+                    <div style="height: 500px">
+                        <p class="blog-paragraph-content">how are you? i am fine.how are you? i am fine.how are you? i am fine.how are you? i am fine.</p>
+                    </div>
                 </div>
                 <div class="blog-paragraph">
                     <h2 class="primary-title">这是一个小标题2</h2>
@@ -65,7 +58,8 @@ export default {
         }
     },
     mounted() {
-        this.$store.commit('GET_TITLE')
+        this.$store.commit('SET_TITLE')
+        this.$store.commit('GET_INFO')
         window.addEventListener('scroll', this.getScroll)
     },
     destroyed() {
@@ -92,6 +86,7 @@ export default {
 .blog-content {
     max-width: 740px;
     margin: 30px auto;
+    animation: identifier .5s ease-in-out forwards;
 }
 
 </style>

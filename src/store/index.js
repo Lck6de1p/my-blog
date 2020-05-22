@@ -5,15 +5,15 @@ Vue.use(Vuex)
 
 const store = new Vuex.Store({
     state: {
-        a: 1111,
         titleList: [],
         titleScrollList: [],
         scroll: 0,
+        titleListTitle: 'Home'
     },
     getters: {},
     mutations: {
-        // 获取所有标题
-        GET_TITLE(state) {
+        // 获取所有标题和高度
+        GET_INFO(state) {
             let paragraph = document.getElementsByClassName('blog-paragraph')
             let title = document.getElementsByClassName('primary-title')
             state.titleList = []
@@ -34,6 +34,15 @@ const store = new Vuex.Store({
         GET_SCROLL(state, params) {
             state.scroll = params
             // console.log(state.scroll)
+        },
+        CLEAR_ALLSCROLL(state) {
+            state.titleList = []
+            state.titleScrollList = [],
+            state.scroll = 0
+            state.titleListTitle = 'Home'
+        },
+        SET_TITLE(state) {
+            state.titleListTitle = document.getElementsByClassName('blog-content-title')[0].innerHTML
         }
     },
 })

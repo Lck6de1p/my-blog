@@ -32,10 +32,20 @@ $background-color: #181818;
 }
 // 小标题
 .primary-title {
-    padding: 20px 0 0 0;
+    padding: 20px 0 10px 0;
     color: $text-color;
     font-weight: 600;
     border-bottom: 1px solid rgba(0, 0, 0, 0.9);
+}
+.blog-paragraph {
+    animation: identifier .6s ease-in-out forwards;
+}
+// 文章内容p样式
+.blog-paragraph-content {
+    color: $text-color;
+    word-wrap: break-word;
+    text-indent: 2em;
+    margin: 1em 0;
 }
 .first-move-enter-active {
     transition: all .5s ease;
@@ -49,3 +59,8 @@ $background-color: #181818;
     opacity: 0;
 }
 
+
+@keyframes identifier {
+    0% {transform: translateY(-5%)}
+    100% {transform: translateY(0%)}
+}

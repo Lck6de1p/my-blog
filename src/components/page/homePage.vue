@@ -8,7 +8,7 @@
                         <h1 v-show="active">ck的博客呀</h1>
                     </transition>
                     <transition name='slide-fade'>
-                        <p v-show="active">yayayyayayyayyayyayayy</p>
+                        <p v-show="active">how are you? i am fine. thank u and u?</p>
                     </transition>
                 </div>
             </div>
@@ -74,6 +74,7 @@ export default {
         setTimeout(() => {
             this.active = true
         }, 0)
+        this.$store.commit('CLEAR_ALLSCROLL')
     },
     methods: {
         test() {
