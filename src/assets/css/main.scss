@@ -43,6 +43,7 @@ $background-color: #181818;
 // 文章内容p样式
 .blog-paragraph-content {
     color: $text-color;
+    text-align: justify;
     word-wrap: break-word;
     text-indent: 2em;
     margin: 1em 0;
