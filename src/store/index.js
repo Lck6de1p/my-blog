@@ -22,7 +22,7 @@ const store = new Vuex.Store({
                 state.titleList.push(title[i].innerHTML)
             }
             state.titleScrollList = []
-            let height = 192
+            let height = 100
             state.titleScrollList.push(height)
             for (let i = 0; i < paragraph.length; i++) {
                 let item = paragraph[i]

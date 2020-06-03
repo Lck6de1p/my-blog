@@ -15,7 +15,10 @@
             <transition name="first-move">
                 <div class="blog-wrapper" v-show="active">
                     <div class="blog-list">
-                       <blog-item v-for="item in 20" :key="item" />
+                       <blog-item 
+                       v-for="(item, index) in blogItemList" 
+                       :key="index" 
+                       :data="item"/>
                     </div>
                     <div class="info-wrappper">
                         <avatar />
@@ -62,6 +65,12 @@ export default {
                 backgroundSize: "cover",
             },
             active: false,
+            blogItemList: [
+                {
+                    title: '解决ios13键盘事件导致页面按钮失效的bug',
+                    time: '2020-03-03',
+                }
+            ],
         }
     },
     components: {

@@ -30,7 +30,7 @@ export default {
             for (let i = 0; i < this.titleScrollList.length; i++) {
                 let height1 = this.titleScrollList[i]
                 let height2 = this.titleScrollList[i + 1]
-                if (!height2 || (this.scroll + 400 >= height1 && this.scroll + 400 < height2)) {
+                if (!height2 || (this.scroll >= height1 && this.scroll < height2)) {
                     return i
                 }
             }

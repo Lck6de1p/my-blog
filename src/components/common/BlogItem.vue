@@ -1,7 +1,7 @@
 <template>
     <div class="blog-list-item">
         <div class="blog-list-item-title">
-            <span @click="test">{{data.title}}</span>
+            <span @click="goto">{{data.title}}</span>
         </div>
         <div class="iconfont-wrapper">
             <span class="iconfont icon-bussiness-man-fill" data="lck"></span>
@@ -12,17 +12,10 @@
 
 <script>
 export default {
-    data() {
-        return {
-            data: {
-                title: '测试',
-                time: '2020-02-03'
-            }
-        }
-    },
+    props: ["data"],
     methods: {
-        test() {
-            this.$router.push('test')
+        goto() {
+            this.$router.push(this.data.time)
         }
     }
 };

@@ -10,8 +10,9 @@ export default new Router({
             redirect: '/homepage'
         },
         {
-            path: '/test',
-            component: () => import('@/components/page/test')
+            path: '/2020-03-03',
+            name: '解决ios13键盘事件导致页面按钮失效的bug',
+            component: () => import('@/components/page/2020-03-03')
         },
         {
             path: '/homepage',
