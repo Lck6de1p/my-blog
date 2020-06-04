@@ -18,7 +18,6 @@ const store = new Vuex.Store({
             let title = document.getElementsByClassName('primary-title')
             state.titleList = []
             for (let i = 0; i < title.length; i++) {
-                console.log(title[i].offsetTop)
                 state.titleList.push(title[i].innerHTML)
             }
             state.titleScrollList = []

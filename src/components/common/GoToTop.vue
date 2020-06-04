@@ -1,7 +1,7 @@
 <template>
     <transition name="to-top">
         <div class="toTop-btn" @click="gotoTop" v-show="btnShow">
-            <span class="iconfont icon-huidaodingbu"></span> 
+            <span class="iconfont icon-huidaodingbu"></span>
         </div>
     </transition>
 </template>

@@ -26,19 +26,15 @@
                         <ul class="tags-wrapper">
                             <li class="tags-item">
                                 javaScript
-                                <div class="tag-num">10</div>
+                                <div class="tag-num">1</div>
                             </li>
                             <li class="tags-item">
-                                javaScript
-                                <div class="tag-num">10</div>
+                                算法
+                                <div class="tag-num">1</div>
                             </li>
                             <li class="tags-item">
-                                javaScript
-                                <div class="tag-num">10</div>
-                            </li>
-                            <li class="tags-item">
-                                javaScript
-                                <div class="tag-num">10</div>
+                                css
+                                <div class="tag-num">0</div>
                             </li>
                         </ul>
                     </div>
@@ -66,6 +62,10 @@ export default {
             },
             active: false,
             blogItemList: [
+                {
+                    title: '动态规划',
+                    time: '2020-06-01',
+                },
                 {
                     title: '解决ios13键盘事件导致页面按钮失效的bug',
                     time: '2020-03-03',
@@ -161,6 +161,7 @@ export default {
     float: right;
     background-color: #f47e60;
     color: #fff;
+    text-align: center;
     width: 20px;
     height: 20px;
     border-radius: 3px;

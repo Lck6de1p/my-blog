@@ -68,7 +68,25 @@ $background-color: #181818;
     opacity: 0;
 }
 
-
+.title-list-pc {
+    position: fixed;
+    top: 50px;
+    bottom: 0;
+    left: 0;
+    width: 250px;
+    padding: 0 20px;
+    border-right: 1px solid rgba(0, 0, 0, 0.9);
+    box-sizing: border-box;
+}
+.blog-page {
+    margin-left: 256px;
+    padding: 50px 30px;
+}
+.blog-content {
+    max-width: 740px;
+    margin: 30px auto;
+    animation: identifier .5s ease-in-out forwards;
+}
 @keyframes identifier {
     0% {transform: translateY(-5%)}
     100% {transform: translateY(0%)}
