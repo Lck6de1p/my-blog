@@ -4,11 +4,11 @@
         <h3 class="avatar-name">lck6de1p</h3>
         <div class="num-wrapper">
             <div>
-                <h4 class="num-item">20</h4>
+                <h4 class="num-item">{{articleNum}}</h4>
                 <h6>article</h6>
             </div>
             <div>
-                <h4 class="num-item">5</h4>
+                <h4 class="num-item">{{tagNum}}</h4>
                 <h6>tag</h6>
             </div>
         </div>
@@ -17,7 +17,14 @@
 
 <script>
 export default {
-
+    computed: {
+        tagNum() {
+            return this.$store.getters.tagList.length;
+        },
+        articleNum() {
+            return this.$store.state.blogItemList.length;
+        }
+    }
 }
 </script>
 

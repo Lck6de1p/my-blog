@@ -24,17 +24,9 @@
                         <avatar />
                         <h3 class="type-title">Category</h3>
                         <ul class="tags-wrapper">
-                            <li class="tags-item">
-                                javaScript
-                                <div class="tag-num">1</div>
-                            </li>
-                            <li class="tags-item">
-                                算法
-                                <div class="tag-num">1</div>
-                            </li>
-                            <li class="tags-item">
-                                css
-                                <div class="tag-num">0</div>
+                            <li class="tags-item" v-for="(item, index) in tagList" :key="index">
+                                {{item.key}}
+                                <div class="tag-num">{{item.num}}</div>
                             </li>
                         </ul>
                     </div>
@@ -61,16 +53,6 @@ export default {
                 backgroundSize: "cover",
             },
             active: false,
-            blogItemList: [
-                {
-                    title: '动态规划',
-                    time: '2020-06-01',
-                },
-                {
-                    title: '解决ios13键盘事件导致页面按钮失效的bug',
-                    time: '2020-03-03',
-                }
-            ],
         }
     },
     components: {
@@ -88,6 +70,14 @@ export default {
     methods: {
         test() {
             this.active = !this.active
+        }
+    },
+    computed: {
+        blogItemList() {
+            return this.$store.state.blogItemList
+        },
+        tagList() {
+            return this.$store.getters.tagList;
         }
     }
 }

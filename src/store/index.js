@@ -8,9 +8,45 @@ const store = new Vuex.Store({
         titleList: [],
         titleScrollList: [],
         scroll: 0,
-        titleListTitle: 'Home'
+        titleListTitle: 'Home',
+        blogItemList: [
+            {
+                title: '动态规划',
+                time: '2020-06-01',
+                tag: '算法'
+            },
+            {
+                title: '解决ios13键盘事件导致页面按钮失效的bug',
+                time: '2020-03-03',
+                tag: 'javaScript'
+            }
+        ]
+    },  
+    getters: {
+        tagList(state) {
+            const map = new Map();
+            state.blogItemList.forEach(item => {
+                if (map.has(item.tag)) {
+                    map.set(item.tag, map.get(item.tag) + 1);
+                } else {
+                    map.set(item.tag, 1);
+                }
+            })
+            // return map
+            let list = [];
+            for (let [key, value] of map) {
+                let obj = {
+                    key: key,
+                    num: value
+                };
+                list.push(obj);
+            }
+            return list
+        },
+        articleNum(state) {
+            return state.blogItemList.length;
+        }
     },
-    getters: {},
     mutations: {
         // 获取所有标题和高度
         GET_INFO(state) {
