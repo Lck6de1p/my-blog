@@ -16,8 +16,13 @@ const store = new Vuex.Store({
                 tag: '算法'
             },
             {
+                title: '图片懒加载',
+                time: '2020-05-20',
+                tag: 'javaScript'
+            },
+            {
                 title: '解决ios13键盘事件导致页面按钮失效的bug',
-                time: '2020-03-03',
+                time: '2020-05-03',
                 tag: 'javaScript'
             }
         ]

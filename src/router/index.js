@@ -20,9 +20,14 @@ export default new Router({
                     component: () => import('@/components/page/2020-06-01')
                 },
                 {
-                    path: '/2020-03-03',
+                    path: '/2020-05-20',
+                    name: '动态规划',
+                    component: () => import('@/components/page/2020-05-20')
+                },
+                {
+                    path: '/2020-05-03',
                     name: '解决ios13键盘事件导致页面按钮失效的bug',
-                    component: () => import('@/components/page/2020-03-03')
+                    component: () => import('@/components/page/2020-05-03')
                 },
             ]
         },
