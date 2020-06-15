@@ -15,6 +15,11 @@ export default new Router({
             component: () => import('@/components/common/Blog'),
             children: [
                 {
+                    path: '/2020-06-15',
+                    name: '原生折线图',
+                    component: () => import('@/components/page/2020-06-15')
+                },
+                {
                     path: '/2020-06-01',
                     name: '动态规划',
                     component: () => import('@/components/page/2020-06-01')

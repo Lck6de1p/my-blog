@@ -11,6 +11,11 @@ const store = new Vuex.Store({
         titleListTitle: 'Home',
         blogItemList: [
             {
+                title: '原生折线图',
+                time: '2020-06-15',
+                tag: 'javaScript'
+            },
+            {
                 title: '动态规划',
                 time: '2020-06-01',
                 tag: '算法'
