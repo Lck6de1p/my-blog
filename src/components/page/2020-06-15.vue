@@ -79,8 +79,10 @@
         pointer-events: none;
         z-index: 1;
     }</pre>
-            <h2 class="primary-title">html部分</h2>
-            <pre class="pre-style">&lt;div id="chartX" class="result-xy">
+            </div>
+            <div class="blog-paragraph">
+                <h2 class="primary-title">html部分</h2>
+                <pre class="pre-style">&lt;div id="chartX" class="result-xy">
         &lt;div class="result-bg" data-month="1">
             &lt;span class="result-bar" style="height: 50%">&lt;s title="5">&lt;/s>&lt;/span>
         &lt;/div>
@@ -88,9 +90,11 @@
         &lt;div class="result-bg" data-month="12">
             &lt;span class="result-bar" style="height: 92%">&lt;s title="9.2">&lt;/s>&lt;/span>
         &lt;/div>
-    &lt;/div>      </pre>
-            <h2 class="primary-title">JS部分</h2>
-            <pre class="pre-style">var eleDots = document.querySelectorAll('#chartX s');
+    &lt;/div>   </pre>
+            </div>
+            <div class="blog-paragraph">
+                <h2 class="primary-title">JS部分</h2>
+                <pre class="pre-style">var eleDots = document.querySelectorAll('#chartX s');
     // 这个是折线方法
     var fnLineChart = function (eles) {
         eles.forEach(function (ele, index) {
@@ -126,6 +130,8 @@
     window.addEventListener('resize', function () {
         fnLineChart(eleDots);
     });         </pre>
+            </div>
+            <div class="blog-paragraph">
                 <h2 class="primary-title">效果</h2>
                 <img src="../../assets/img/chart.jpg" alt="" class="img-chart">
             </div>
