@@ -78,65 +78,69 @@
         -ms-pointer-events: none;
         pointer-events: none;
         z-index: 1;
-    }</pre>
+    }           </pre>
             </div>
-            <div class="blog-paragraph">
-                <h2 class="primary-title">html部分</h2>
+        </div>
+        <div class="blog-paragraph">
+            <h2 class="primary-title">html部分</h2>
+            <div>
                 <pre class="pre-style">&lt;div id="chartX" class="result-xy">
-        &lt;div class="result-bg" data-month="1">
-            &lt;span class="result-bar" style="height: 50%">&lt;s title="5">&lt;/s>&lt;/span>
-        &lt;/div>
-        ...
-        &lt;div class="result-bg" data-month="12">
-            &lt;span class="result-bar" style="height: 92%">&lt;s title="9.2">&lt;/s>&lt;/span>
-        &lt;/div>
-    &lt;/div>   </pre>
+    &lt;div class="result-bg" data-month="1">
+        &lt;span class="result-bar" style="height: 50%">&lt;s title="5">&lt;/s>&lt;/span>
+    &lt;/div>
+    ...
+    &lt;div class="result-bg" data-month="12">
+        &lt;span class="result-bar" style="height: 92%">&lt;s title="9.2">&lt;/s>&lt;/span>
+    &lt;/div>
+&lt;/div>   </pre>
             </div>
-            <div class="blog-paragraph">
-                <h2 class="primary-title">JS部分</h2>
+        </div>
+        <div class="blog-paragraph">
+            <h2 class="primary-title">JS部分</h2>
+            <div>
                 <pre class="pre-style">var eleDots = document.querySelectorAll('#chartX s');
-    // 这个是折线方法
-    var fnLineChart = function (eles) {
-        eles.forEach(function (ele, index) {
-            var eleNext = eleDots[index + 1];
-            if (!eleNext) { return;  }
-            var eleLine = ele.querySelector('i');
-            if (!eleLine) {
-                eleLine = document.createElement('i');
-                eleLine.setAttribute('line', '');
-                ele.appendChild(eleLine);
-            }
-            // 记录坐标
-            var boundThis = ele.getBoundingClientRect();
-            // 下一个点的坐标
-            var boundNext = eleNext.getBoundingClientRect();
-            // 计算长度和旋转角度
-            var x1 = boundThis.left, y1 = boundThis.top;
-            var x2 = boundNext.left, y2 = boundNext.top;
-            // 长度
-            var distance = Math.sqrt((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1));
-            // 旋转
-            var radius = Math.atan((y2 - y1) / (x2 - x1));
-            // 设置线条样式
-            eleLine.style.width = distance + 'px';
-            eleLine.style.msTransform = 'rotate('+ radius +'rad)';
-            eleLine.style.transform = 'rotate('+ radius +'rad)';
-        });
-    };
-    
-    // 调用折线方法
+// 这个是折线方法
+var fnLineChart = function (eles) {
+    eles.forEach(function (ele, index) {
+        var eleNext = eleDots[index + 1];
+        if (!eleNext) { return;  }
+        var eleLine = ele.querySelector('i');
+        if (!eleLine) {
+            eleLine = document.createElement('i');
+            eleLine.setAttribute('line', '');
+            ele.appendChild(eleLine);
+        }
+        // 记录坐标
+        var boundThis = ele.getBoundingClientRect();
+        // 下一个点的坐标
+        var boundNext = eleNext.getBoundingClientRect();
+        // 计算长度和旋转角度
+        var x1 = boundThis.left, y1 = boundThis.top;
+        var x2 = boundNext.left, y2 = boundNext.top;
+        // 长度
+        var distance = Math.sqrt((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1));
+        // 旋转
+        var radius = Math.atan((y2 - y1) / (x2 - x1));
+        // 设置线条样式
+        eleLine.style.width = distance + 'px';
+        eleLine.style.msTransform = 'rotate('+ radius +'rad)';
+        eleLine.style.transform = 'rotate('+ radius +'rad)';
+    });
+};
+
+// 调用折线方法
+fnLineChart(eleDots);
+// 浏览器尺寸改变时候
+window.addEventListener('resize', function () {
     fnLineChart(eleDots);
-    // 浏览器尺寸改变时候
-    window.addEventListener('resize', function () {
-        fnLineChart(eleDots);
-    });         </pre>
-            </div>
-            <div class="blog-paragraph">
-                <h2 class="primary-title">效果</h2>
-                <img src="../../assets/img/chart.jpg" alt="" class="img-chart">
-            </div>
-        </div> 
-    </div>        
+});             </pre>
+            </div> 
+        </div>
+        <div class="blog-paragraph">
+            <h2 class="primary-title">效果</h2>
+            <img src="../../assets/img/chart.jpg" alt="" class="img-chart">
+        </div>
+    </div>       
 </template>
 <style lang="scss" scoped>
     .img-chart {

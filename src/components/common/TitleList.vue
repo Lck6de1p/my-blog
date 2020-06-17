@@ -15,7 +15,7 @@ export default {
                 return
             }
             console.log(this.titleScrollList[index])
-            window.scrollTo(0, this.titleScrollList[index] - 50)
+            window.scrollTo(0, this.titleScrollList[index])
         }
     },
     computed: {
